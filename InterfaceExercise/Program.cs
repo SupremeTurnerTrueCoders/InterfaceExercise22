@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 namespace InterfaceExercise
 {
@@ -9,15 +10,15 @@ namespace InterfaceExercise
         {
            var car = new Car();
            var truck = new Truck();
-           var SUV = new SUV();
-           
-            var vehicles = new List<IVehicle>() { Car, Truck, SUV }
+           var suv = new SUV();
 
-            foreach (var vehicle in car)
+            var vehicles = new List<IVehicle>() { car, truck, suv };
+
+            foreach (var vehicle in vehicles)
             {
-                vehicles.Drive();
-                vehicles.ChangeGears(true);
-                vehicles.Reverse();
+                
+                vehicle.ChangeGears(true);
+                
             } 
             
         }

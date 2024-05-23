@@ -12,23 +12,24 @@ namespace InterfaceExercise
         {
         }
 
-        public int NumberOfWheels { get; set; } = 4;
-        public int EngineType { get; set; } = 4;
-        public string ExteriorColor { get; set; } = "Black";
-        public string InteriorColor { get; set; } = "Caramel";
-        public string Logo { get; set; } = "Mercedez Benz";
-        public string Motto { get; set; } = "The Best Or Nothing"
+        public int NumberOfWheels { get; set; } 
+        public int EngineType { get; set; } 
+        public string ExteriorColor { get; set; } 
+        public string InteriorColor { get; set; } 
+        public string Logo { get; set; } 
+        public string Motto { get; set; } 
         public bool HasChangedGears { get; set; }
+        public string SignatureCar { get; set; }
 
         public void Drive()
         {
-            Console.WriteLine($"{GetType().Name} now driving foward...)
+            Console.WriteLine($"{GetType().Name} now driving foward...");
         }
         public void Reverse()
         {
             if (HasChangedGears == true)
             {
-                Console.WriteLine($"{GetType().Name} now reversing...)
+                Console.WriteLine($"{GetType().Name} now reversing...");
                 HasChangedGears = false;
             }else
             {
@@ -42,7 +43,7 @@ namespace InterfaceExercise
         {
             if (HasChangedGears == true)
             {
-                Console.WriteLine($"{GetType().Name} now reversing...)
+                Console.WriteLine($"{GetType().Name} now reversing...");
                 HasChangedGears = false;
             }
             else
@@ -57,6 +58,10 @@ namespace InterfaceExercise
         {
             HasChangedGears = isChanged;
         }
+
+        public void DisplayDetails()
+        {
+            Console.WriteLine($"{NumberOfWheels}, {EngineType}, {ExteriorColor}, {InteriorColor}, {Logo}, {Motto}, {HasChangedGears}, {SignatureCar}");
+        }
     }
-}
 }

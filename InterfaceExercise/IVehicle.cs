@@ -16,6 +16,10 @@ namespace InterfaceExercise
 
         public void ChangeGears(bool isChanged);
 
+        //Create a stubbed out method called DisplayDetails in your IVehicle interface.
+
+        public void DisplayDetails();
+
 
     }
 }
